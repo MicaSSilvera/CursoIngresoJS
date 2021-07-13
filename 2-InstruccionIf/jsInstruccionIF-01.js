@@ -1,15 +1,11 @@
 function mostrar()
 {
-	var edad = txtIdEdad.value;
+	var edad = parseInt(txtIdEdad.value);
 	if (edad == 15){
 		alert("nina bonita");
-
-	}
-	else {
-		alert("sin resultado");
+	}else{
+		alert("sin respuesta");
 	}
 
 
-
-
-}//FIN DE LA FUNCIÓN
+}
