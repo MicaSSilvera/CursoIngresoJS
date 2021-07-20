@@ -10,5 +10,61 @@ E.	Si el importe final con descuento suma más de $120  se debe sumar un 10% de 
  */
 function CalcularPrecio () 
 {
- 	
+    var resultadofinal;
+    var resultado;
+    var cantidadlamparas = parseInt(txtIdCantidad.value);
+    var descuento = parseInt(txtIdprecioDescuento.value);
+    var marca = document.getElementById('Marca').value;
+     
+    if (cantidadlamparas >= 6){
+         resultado = (cantidadlamparas * 50)/100;
+         resultado = cantidadlamparas - resultado;
+         resultado = txtIdprecioDescuento.value;
+
+     }else if (cantidadlamparas == 5){
+        
+        if (marca == "ArgentinaLuz" ){
+            resultado = (cantidadlamparas * 40)/100;
+            resultado = cantidadlamparas - resultado;
+            resultado = txtIdprecioDescuento.value; 
+        }else{
+            resultado = (cantidadlamparas * 30)/100;
+            resultado = cantidadlamparas - resultado;
+            resultado = txtIdprecioDescuento.value; 
+        }
+
+    }else if (cantidadlamparas == 4){
+
+        if (marca == "ArgentinaLuz" || marca == "FelipeLamparas" ){
+            resultado = (cantidadlamparas * 25)/100;
+            resultado = cantidadlamparas - resultado;
+            resultado = txtIdprecioDescuento.value; 
+        }else{
+        resultado = (cantidadlamparas * 20)/100;
+        resultado = cantidadlamparas - resultado;
+        resultado = txtIdprecioDescuento.value;
+        }
+    }else if (cantidadlamparas == 3){
+        
+        if (marca == "ArgentinaLuz" ){
+            resultado = (cantidadlamparas * 15)/100;
+            resultado = cantidadlamparas - resultado;
+            resultado = txtIdprecioDescuento.value; 
+        }else if (marca == "FelipeLamparas" ){
+                resultado = (cantidadlamparas * 10)/100;
+                resultado = cantidadlamparas - resultado;
+                resultado = txtIdprecioDescuento.value; 
+            }
+    }else{
+        resultado = (cantidadlamparas * 5)/100;
+        resultado = cantidadlamparas - resultado;
+        resultado = txtIdprecioDescuento.value;
+    }
+
+
+    if ((resultado) > 120){
+        resultadofinal = ((resultado)*10) / 100;
+        alert(" Usted pago " + resultadofinal +  "de IIBB., siendo" );
+    }
+
 }
