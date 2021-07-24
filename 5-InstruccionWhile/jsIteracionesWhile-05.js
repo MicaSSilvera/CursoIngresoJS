@@ -10,4 +10,4 @@ function mostrar()
 	}
 	txtIdSexo.value = sexo;
 	
-}//FIN DE LA FUNCIÓN
+}//FIN DE L
