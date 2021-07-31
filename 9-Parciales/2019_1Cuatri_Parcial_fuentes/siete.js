@@ -3,7 +3,6 @@ function mostrar(){
     var promedio = 0;
     var alturaMin = 99999999;
     var sexoMin;
-    var alturaMax = 0;
     var cantidadMujeres = 0;
 
     while(contador < 5){
